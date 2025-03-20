@@ -52,7 +52,7 @@ def test_numero_caracteres_especiales_permitidos_():
 
 
 
-def test_se_permiten_espacios( Aaa):
+def test_se_permiten_espacios():
     positive_assert(" A Aaa ")
 
 

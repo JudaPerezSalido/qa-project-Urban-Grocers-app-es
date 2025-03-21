@@ -61,10 +61,8 @@ def test_se_permiten_números():
 
 
 def test_el_parametro_no_se_pasa_en_la_solicitud():
-    kit_body = data.kit_body.copy()
-    kit_body.pop("name")
-    negative_assert(kit_body)
-
-
-def test_el_parametro_no_se_pasa_en_la_solicitud():
     negative_assert(data.no_name)
+
+
+def test_el_parametro_es_de_diferente_tipo():
+    negative_assert(data.diferente_tipo)

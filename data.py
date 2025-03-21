@@ -22,3 +22,4 @@ caracteres_especiales = "\"№%@\","
 nombre_con_espacios = " A Aaa "
 nombre_numeros = "123"
 no_name = None
+diferente_tipo = 123

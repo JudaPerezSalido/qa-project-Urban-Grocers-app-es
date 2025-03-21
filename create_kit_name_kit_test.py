@@ -30,34 +30,34 @@ def negative_assert(name):
     assert post_kit.json()["message"] == "No se han aprobado todos los parámetros requeridos"
 
 def test_numero_permitido_de_caracteres_1():
-    positive_assert("a")
+    positive_assert(data.un_caracter)
 
 
 def test_numero_permitido_de_caracteres_511():
-    positive_assert("AbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdAbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabC")
+    positive_assert(data.quinientos_once_caracteres)
 
 
 
 def test_numero_de_caracteres_0():
-    negative_assert("")
+    negative_assert(data.cero_caracteres)
 
 
 def test_numero_permitido_de_caracteres_512():
-    negative_assert("AbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdAbcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcD")
+    negative_assert(data.quinientos_doce_caracteres)
 
 
 
 def test_numero_caracteres_especiales_permitidos_():
-    positive_assert("\"№%@\",")
+    positive_assert(data.cero_caracteres)
 
 
 
 def test_se_permiten_espacios():
-    positive_assert(" A Aaa ")
+    positive_assert(data.nombre_con_espacios)
 
 
 def test_se_permiten_números():
-    positive_assert("123")
+    positive_assert(data.nombre_numeros)
 
 
 def test_el_parametro_no_se_pasa_en_la_solicitud():
@@ -67,4 +67,4 @@ def test_el_parametro_no_se_pasa_en_la_solicitud():
 
 
 def test_el_parametro_no_se_pasa_en_la_solicitud():
-    negative_assert(123)
+    negative_assert(data.no_name)
